@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			input{
+				border: none;
+				border-bottom: 1px solid black;
+			}
+			input:focus{
+				outline: none;
+			}
+
+			#tela_jogo{
+				margin-top: 50px;
+			}
+
+			#tela_jogo div{
+				display: inline-block;
+			}
+		</style>
+
+		<title>Jogo da velha</title>
+		<script src="jquery-2.2.1.js"></script>
+		<script src="jogo.js"></script>
+	</head>
+
+	<body>
+		<div id="tela_inicial" align="center">
+			<table width="600">
+				<tbody>
+					<tr>
+						<td colspan="3" style="text-align: center;">JOGO DA VELHA</td>
+					</tr>
+					<tr>
+						<td align="center">
+							<img src="imagens/jogador_1.png" alt="Jogador 1"><br>
+							<input id="jogador1" type="text" placeholder="Nome do Jogador 1" style="padding: 5px;"/>
+						</td>
+						<td align="center"><img class="btn_iniciar" src="imagens/iniciar.png" alt="Iniciar Jogo"></td>
+						<td align="center">
+							<img src="imagens/jogador_2.png" alt="Jogador 2" ><br>
+							<input id="jogador2" type="text" placeholder="Nome do jogador 2">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+		<div id="tela_jogo" align="center">
+			<div>
+				<img src="imagens/jogador_1.png" alt="Jogador 1"><br>
+				<span class="nome_jogador1"></span>				
+			</div>
+
+			<div>
+				<table border="0">
+					<tr>
+						<td style="border-bottom: 1px solid #F13399; border-right: 1px solid #F13399;">
+							<div class="jogada" id="a-1" style="width: 100px; height: 100px;"></div>
+						</td>
+						<td style="border-bottom: 1px solid #F13399">
+							<div class="jogada" id="a-2" style="width: 100px; height: 100px;"></div>
+						</td>
+						<td style="border-left: 1px solid #F13399; border-bottom: 1px solid #F13399;">
+							<div class="jogada" id="a-3" style="width: 100px; height: 100px;"></div>
+						</td>
+					</tr>
+					<tr>
+						<td style="border-right: 1px solid #F13399;">
+							<div class="jogada" id="b-1" style="width: 100px; height: 100px;"></div>
+						</td>
+						<td>
+							<div class="jogada" id="b-2" style="width: 100px; height: 100px;"></div>
+						</td>
+						<td style="border-left: 1px solid #F13399;">
+							<div class="jogada" id="b-3" style="width: 100px; height: 100px;"></div>
+						</td>
+					</tr>
+					<tr>
+						<td style="border-top: 1px solid #F13399; border-right: 1px solid #F13399;">
+							<div class="jogada" id="c-1" style="width: 100px; height: 100px;"></div>
+						</td>
+						<td style="border-top: 1px solid #F13399;">
+							<div class="jogada" id="c-2" style="width: 100px; height: 100px;"></div>
+						</td>
+						<td style="border-left: 1px solid #F13399; border-top: 1px solid #F13399;">
+							<div class="jogada" id="c-3" style="width: 100px; height: 100px;"></div>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div>
+				<img src="imagens/jogador_2.png" alt="Jogador 2"><br>
+				<span class="nome_jogador2"></span>
+			</div>
+		</div>
+		<div align="center">
+			<p onclick="reiniciar()" style="border: 1px solid #ccc; padding: 4px; cursor: pointer; width: 20%;">Reiniciar Partida</p>
+		</div>
+	</body>
+</html>
